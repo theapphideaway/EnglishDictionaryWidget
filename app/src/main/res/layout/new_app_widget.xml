@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00FFFFFF"
+>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/linear_layout"
+            android:layout_width="339dp"
+            android:layout_height="50dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="36sp"
+            android:textStyle="italic"
+            android:clickable="true"
+            android:background="@drawable/search_edit_text"
+            style="@android:style/Widget.EditText" android:layout_centerInParent="true"
+            android:gravity="center_vertical">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dictionary"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Define a word"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:textStyle="italic" android:textSize="24sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
