@@ -1,4 +1,4 @@
-package com.theapphideaway.englishdictionarywidget
+package com.theapphideaway.englishdictionarywidget.Services
 
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import okhttp3.Interceptor
@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class DictionaryService {
 
-    private val BASE_URL = "https://newsapi.org/v2/"
+    private val BASE_URL = "https://wordsapiv1.p.mashape.com/"
     private var mRetrofit: Retrofit? = null
 
     init {
@@ -32,5 +32,11 @@ class DictionaryService {
             .addHeader("X-Mashape-Key", "")
             .build())
     }
+
+    fun getHeadlineApi(): DictionaryInterface {
+        return mRetrofit!!.create<DictionaryInterface>(DictionaryInterface::class.java!!)
+    }
+
+
 
 }
